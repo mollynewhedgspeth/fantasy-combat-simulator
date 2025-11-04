@@ -28,6 +28,17 @@ com/
 │       └── AdaptiveAttack.java         (ML-powered attack)
 ```
 
+## Build & Run
+```bash
+# Compile
+mvn compile
+
+# Run
+mvn exec:java
+
+# Package as JAR
+mvn package
+```
 ---
 
 ## Lab Steps
