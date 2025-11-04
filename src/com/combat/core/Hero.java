@@ -61,7 +61,7 @@ public class Hero {
         // Armor reduces damage
         int actualDamage = Math.max(0, damage - armorRating);
         health = Math.max(0, health - actualDamage);
-        System.out.println("   💔 Hero takes " + actualDamage + " damage! " +
+        System.out.println("   Hero takes " + actualDamage + " damage! " +
                 "Health: " + health + "/" + maxHealth);
     }
 

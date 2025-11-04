@@ -61,9 +61,9 @@ public class AdaptiveAttack implements AttackStrategy {
         double confidence = model.getConfidence(input);
 
         // Step 3: Display decision reasoning
-        System.out.println("   🤖 ML Model: " + model.getModelName());
-        System.out.println("   📊 Analysis: " + input);
-        System.out.println("   🎯 Decision: " + prediction + " (Confidence: "
+        System.out.println("   ML Model: " + model.getModelName());
+        System.out.println("   Analysis: " + input);
+        System.out.println("   Decision: " + prediction + " (Confidence: "
                 + String.format("%.0f%%", confidence * 100) + ")");
 
         // Step 4: Select and execute appropriate attack

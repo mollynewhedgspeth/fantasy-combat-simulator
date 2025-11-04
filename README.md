@@ -43,7 +43,7 @@ mvn package
 
 ## Lab Steps
 
-### **Step 1: Define ML Strategy Contracts (10 minutes)**
+### **Step 1: Define ML Strategy Contracts**
 **Focus: ISP & DIP**
 
 1. Create `com.combat.ml.DecisionInput.java`
@@ -59,7 +59,7 @@ mvn package
 
 ---
 
-### **Step 2: Implement Concrete ML Strategies (15 minutes)**
+### **Step 2: Implement Concrete ML Strategies**
 **Focus: OCP & LSP**
 
 3. Create `com.combat.ml.DecisionTreeModel.java`
@@ -76,7 +76,7 @@ mvn package
 
 ---
 
-### **Step 3: Create ML-Driven Attack Strategy (15 minutes)**
+### **Step 3: Create ML-Driven Attack Strategy**
 **Focus: SRP**
 
 5. Create attack interfaces and implementations:
@@ -94,7 +94,7 @@ mvn package
 
 ---
 
-### **Step 4: Update Hero and Run Simulation (15 minutes)**
+### **Step 4: Update Hero and Run Simulation**
 **Focus: DIP & LSP**
 
 7. Create `com.combat.core.Hero.java`
@@ -141,28 +141,28 @@ mvn package
 
 ## SOLID Principles Demonstrated
 
-### ✅ **Single Responsibility Principle (SRP)**
+### **Single Responsibility Principle (SRP)**
 - `DecisionInput`: Only handles feature data
 - `AdaptiveAttack`: Only orchestrates decisions
 - `Hero`: Only manages hero state
 - Each class has ONE reason to change
 
-### ✅ **Open/Closed Principle (OCP)**
+### **Open/Closed Principle (OCP)**
 - Add new ML models by implementing `DecisionModel`
 - Add new attacks by implementing `AttackStrategy`
 - No modification to existing code required
 
-### ✅ **Liskov Substitution Principle (LSP)**
+### **Liskov Substitution Principle (LSP)**
 - `DecisionTreeModel` and `NaiveBayesModel` are interchangeable
 - System works identically regardless of which model is used
 - Any `AttackStrategy` can replace another
 
-### ✅ **Interface Segregation Principle (ISP)**
+### **Interface Segregation Principle (ISP)**
 - `DecisionModel`: Only 2-3 essential methods
 - `AttackStrategy`: Only 2 essential methods
 - No client depends on methods it doesn't use
 
-### ✅ **Dependency Inversion Principle (DIP)**
+### **Dependency Inversion Principle (DIP)**
 - High-level `AdaptiveAttack` depends on abstractions
 - Not on concrete `DecisionTreeModel` or `StrongAttackStrategy`
 - Dependencies injected via constructor
@@ -200,11 +200,11 @@ Try these to practice SOLID principles:
 
 After completing this lab, you should understand:
 
-1. ✅ How to design extensible ML systems using SOLID principles
-2. ✅ The difference between depending on abstractions vs. concrete classes
-3. ✅ How to add functionality without modifying existing code
-4. ✅ Why each class should have a single, clear responsibility
-5. ✅ How to make systems testable and maintainable
+1. How to design extensible ML systems using SOLID principles
+2. The difference between depending on abstractions vs. concrete classes
+3. How to add functionality without modifying existing code
+4. Why each class should have a single, clear responsibility
+5. How to make systems testable and maintainable
 
 ---
 
@@ -237,13 +237,3 @@ After completing this lab, you should understand:
 4. How would you add logging/telemetry to track ML decision accuracy over time?
 
 ---
-
-## Resources
-
-- **SOLID Principles:** https://en.wikipedia.org/wiki/SOLID
-- **Strategy Pattern:** https://refactoring.guru/design-patterns/strategy
-- **Dependency Injection:** https://en.wikipedia.org/wiki/Dependency_injection
-
----
-
-**Happy Coding! 🚀**

@@ -14,7 +14,7 @@ public class WeakAttackStrategy implements AttackStrategy {
     @Override
     public void execute(Hero target) {
         int damage = BASE_DAMAGE + (int)(Math.random() * DAMAGE_VARIANCE);
-        System.out.println("   ⚔️  Weak Attack executed! Damage: " + damage);
+        System.out.println("   Weak Attack executed! Damage: " + damage);
         target.takeDamage(damage);
     }
 

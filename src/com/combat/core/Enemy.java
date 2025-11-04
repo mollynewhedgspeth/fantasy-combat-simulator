@@ -38,7 +38,7 @@ public class Enemy {
      * @param hero The hero to attack
      */
     public void performAttack(Hero hero) {
-        System.out.println("\n🔥 " + name + " attacks using: " + attackStrategy.getName());
+        System.out.println("\n" + name + " attacks using: " + attackStrategy.getName());
         attackStrategy.execute(hero);
     }
 

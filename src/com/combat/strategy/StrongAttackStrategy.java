@@ -14,7 +14,7 @@ public class StrongAttackStrategy implements AttackStrategy {
     @Override
     public void execute(Hero target) {
         int damage = BASE_DAMAGE + (int)(Math.random() * DAMAGE_VARIANCE);
-        System.out.println("   🗡️  STRONG ATTACK executed! Damage: " + damage);
+        System.out.println("   STRONG ATTACK executed! Damage: " + damage);
         target.takeDamage(damage);
     }
 

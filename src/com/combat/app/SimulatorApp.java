@@ -29,12 +29,12 @@ public class SimulatorApp {
         printHeader();
 
         // Scenario 1: Enemy using Decision Tree Model
-        System.out.println("\n🎮 SCENARIO 1: Enemy AI with Decision Tree Model");
+        System.out.println("\nSCENARIO 1: Enemy AI with Decision Tree Model");
         System.out.println("═".repeat(70));
         runCombatScenario(new DecisionTreeModel(), "Dark Mage");
 
         // Scenario 2: Enemy using Naive Bayes Model (Easy swap! OCP/LSP in action)
-        System.out.println("\n\n🎮 SCENARIO 2: Enemy AI with Naive Bayes Model");
+        System.out.println("\n\nSCENARIO 2: Enemy AI with Naive Bayes Model");
         System.out.println("═".repeat(70));
         runCombatScenario(new NaiveBayesModel(), "Shadow Warrior");
 
@@ -48,7 +48,7 @@ public class SimulatorApp {
     private static void runCombatScenario(com.combat.ml.DecisionModel model, String enemyName) {
         // Create hero with moderate stats
         Hero hero = new Hero(100, 3);
-        System.out.println("🛡️  " + hero);
+        System.out.println(hero);
 
         // Create concrete attack strategies
         StrongAttackStrategy strongAttack = new StrongAttackStrategy();
@@ -64,13 +64,13 @@ public class SimulatorApp {
         int turn = 1;
         while (hero.isAlive() && turn <= 5) {
             System.out.println("\n" + "─".repeat(70));
-            System.out.println("⚔️  TURN " + turn);
+            System.out.println("TURN " + turn);
             System.out.println("─".repeat(70));
 
             enemy.performAttack(hero);
 
             if (!hero.isAlive()) {
-                System.out.println("\n💀 Hero has been defeated!");
+                System.out.println("\nHero has been defeated!");
                 break;
             }
 
@@ -80,10 +80,10 @@ public class SimulatorApp {
         // Display result
         System.out.println("\n" + "═".repeat(70));
         if (hero.isAlive()) {
-            System.out.println("✅ Hero survived! Final health: " +
+            System.out.println("Hero survived! Final health: " +
                     hero.getHealth() + "/" + hero.getMaxHealth());
         } else {
-            System.out.println("❌ Hero was defeated in combat!");
+            System.out.println("Hero was defeated in combat!");
         }
         System.out.println("═".repeat(70));
     }
@@ -93,7 +93,7 @@ public class SimulatorApp {
         System.out.println("         FANTASY COMBAT SIMULATOR - ML-Powered Enemy AI");
         System.out.println("                    SOLID Principles Demonstration");
         System.out.println("═".repeat(70));
-        System.out.println("\n📚 SOLID Principles in Action:");
+        System.out.println("\nSOLID Principles in Action:");
         System.out.println("   • SRP: Each class has ONE clear responsibility");
         System.out.println("   • OCP: Add new ML models without changing existing code");
         System.out.println("   • LSP: Any DecisionModel can substitute another");
@@ -106,17 +106,17 @@ public class SimulatorApp {
         System.out.println("\n\n" + "═".repeat(70));
         System.out.println("                     SIMULATION COMPLETE");
         System.out.println("═".repeat(70));
-        System.out.println("\n🎯 Key Observations:");
+        System.out.println("\nKey Observations:");
         System.out.println("   1. ML models made DIFFERENT decisions based on their logic");
         System.out.println("   2. We swapped models with ZERO changes to core combat code");
         System.out.println("   3. Each component is INDEPENDENT and TESTABLE");
         System.out.println("   4. Adding new features/models requires NO modification to existing code");
-        System.out.println("\n💡 Extension Ideas:");
+        System.out.println("\nExtension Ideas:");
         System.out.println("   • Add new ML model (e.g., RandomForestModel)");
         System.out.println("   • Add new features (distance, mana, enemy health)");
         System.out.println("   • Add new attack types (MagicAttack, DefensiveAttack)");
         System.out.println("   • Add confidence thresholds for decisions");
-        System.out.println("\n✨ That's SOLID design in action!");
+        System.out.println("\nThat's SOLID design in action!");
         System.out.println("═".repeat(70) + "\n");
     }
 }
